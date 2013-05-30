@@ -46,7 +46,7 @@ class Item(models.Model):
 	description = models.CharField(max_length=1024, null=True, blank=True)
 	upc = models.CharField(max_length=13, null=True, blank=True) # for EAN-13
 	asin = models.CharField(max_length=10, null=True, blank=True)
-	url = models.URLField(verify_exists=True, max_length=200, null=True, blank=True)
+	url = models.URLField(max_length=200, null=True, blank=True)
 	last_edited = models.DateTimeField(auto_now=False, blank=True)
 	def __unicode__(self):
 		return self.name
